@@ -1,2 +1,3 @@
-# gulper
-A Library for easily doing common gulp tasks.
+# Gulper - Gulp Helper
+
+A Library to simplify common gulp tasks.
