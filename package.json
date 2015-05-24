@@ -1,6 +1,6 @@
 {
   "name": "gulpir",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "An extension of laravel-elixir",
   "repository": {
     "type": "git",
