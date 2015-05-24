@@ -1,17 +1,17 @@
 {
-  "name": "gulper",
-  "version": "0.1",
+  "name": "gulpir",
+  "version": "0.1.0",
   "description": "An extension of laravel-elixir",
   "repository": {
     "type": "git",
-    "url": "http://github.com/alexisvincent/gulper.git"
+    "url": "http://github.com/alexisvincent/gulpir.git"
   },
   "author": {
     "name": "Alexis Vincent",
     "email": "alexisjohnvincent@gmail.com",
     "url": "http://alexisvincent.net/"
   },
-  "main": "./build/gulper.js",
+  "main": "./build/gulpir.js",
   "devDependencies": {
     "gulp": "^3.8.11",
     "gulp-babel": "^4.0.1"

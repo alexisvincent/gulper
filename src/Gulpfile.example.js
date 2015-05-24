@@ -1,4 +1,4 @@
-var gulper = require('../build/gulper');
+var gulper = require('../build/gulpir');
 
 /*
  |----------------------------------------------------------------
@@ -12,7 +12,7 @@ var gulper = require('../build/gulper');
  */
 
 //Webpack
-gulper(function(mix){
+gulpir(function(mix){
 	mix.webpack({
 		entry: './gulper.js',
 
