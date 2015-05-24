@@ -1,5 +1,6 @@
 {
   "name": "gulper",
+  "version": "0.1",
   "description": "An extension of laravel-elixir",
   "repository": {
     "type": "git",
