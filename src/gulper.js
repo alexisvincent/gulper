@@ -1,21 +1,22 @@
-import Gulper from 'laravel-elixir';
+import gulper from 'laravel-elixir';
 var util = require('gulp-util');
 
-Gulper.config.production = !!util.env.production;
-Gulper.config.srcDir = 'app';
-Gulper.config.assetsDir = '/';
-Gulper.config.cssOutput = 'build/css';
-Gulper.config.jsOutput = 'build/js';
-Gulper.config.sourcemaps = !util.env.production;
-Gulper.config.bowerDir = 'vendor/bower_components';
-Gulper.config.tasks = [];
-Gulper.config.watchers = {default: {}};
-Gulper.config.duplicate = [];
-Gulper.config.concatenate = {css: [], js: []};
+gulper.config.production = !!util.env.production;
+gulper.config.srcDir = '/';
+gulper.config.assetsDir = '/';
+gulper.config.cssOutput = 'build/css';
+gulper.config.jsOutput = 'build/js';
+gulper.config.sourcemaps = !util.env.production;
+gulper.config.bowerDir = 'vendor/bower_components';
+gulper.config.tasks = [];
+gulper.config.watchers = {default: {}};
+gulper.config.duplicate = [];
+gulper.config.concatenate = {css: [], js: []};
 
-Gulper.config.setDefaultsFrom('gulper.json');
+gulper.config.setDefaultsFrom('gulper.json');
 
-// Extentions
-require('./ingredients/webpack')(Gulper)
+//Extentions
+require('./ingredients/webpack')
 
-export default Gulper;
+
+export default gulper;

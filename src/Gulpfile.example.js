@@ -1,4 +1,4 @@
-var gulper = require('gulper');
+var gulper = require('../build/gulper');
 
 /*
  |----------------------------------------------------------------
@@ -14,11 +14,11 @@ var gulper = require('gulper');
 //Webpack
 gulper(function(mix){
 	mix.webpack({
-		entry: './frontend/src/js/hbs.js',
+		entry: './gulper.js',
 
 		output: {
-			filename: 'hbs.min.js',
-			path: './frontend/src/build/',
+			filename: 'gulper.min.js',
+			path: './build/',
 			publicPath: './'
 		}
 	}, true);
