@@ -7,7 +7,7 @@ var gulp = require('gulp');
 var babel = require("gulp-babel");
 
 gulp.task('babel-gulper', function () {
-	return gulp.src("src/gulper.js")
+	return gulp.src("src/gulpir.js")
 		 .pipe(babel())
 		 .pipe(gulp.dest("./build"));
 });
