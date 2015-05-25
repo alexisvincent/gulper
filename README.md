@@ -1,8 +1,8 @@
-# Gulper - Gulp Helper
+# Gulpir - Gulp Helper | Elixir Extention
 
-Gulper is an extension of Laravel Elixir. It may be used as a drop in replacement for Elixir
+Gulpir is an extension of Laravel Elixir. It may be used as a drop in replacement for Elixir
 
-Gulper adds the following extentions:
+Gulpir adds the following extentions:
  
     webpack
 
