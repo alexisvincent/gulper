@@ -1,4 +1,4 @@
-var gulpir = require('../build/gulpir');
+var gulpir = require('gulpir');
 
 /*
  |----------------------------------------------------------------

@@ -1,4 +1,4 @@
-import gulpir from 'laravel-elixir';
+var gulpir =require('laravel-elixir');
 var util = require('gulp-util');
 
 gulpir.config.production = !!util.env.production;
@@ -13,11 +13,11 @@ gulpir.config.watchers = {default: {}};
 gulpir.config.duplicate = [];
 gulpir.config.concatenate = {css: [], js: []};
 
-gulpir.config.setDefaultsFrom('gulper.json');
+gulpir.config.setDefaultsFrom('gulpir.json');
 
 //Extentions
 require('./ingredients/webpack')
 require('./ingredients/syncFile')
 require('./ingredients/syncDir')
 
-export default gulpir;
+module.exports = gulpir;

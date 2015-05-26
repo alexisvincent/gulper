@@ -11,14 +11,13 @@
     "email": "alexisjohnvincent@gmail.com",
     "url": "http://alexisvincent.net/"
   },
-  "main": "./build/gulpir.js",
+  "main": "gulpir.js",
   "devDependencies": {
     "gulp": "^3.8.11",
-    "gulp-babel": "^4.0.1"
   },
   "dependencies": {
     "gulp-util": "^3.0.4",
-    "laravel-elixir": "^0.14.2",
+    "laravel-elixir": "*",
     "lodash": "^3.6.0",
     "underscore": "^1.8.2",
     "webpack": "^1.7.3"

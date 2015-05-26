@@ -1,5 +1,5 @@
 var webpack = require('webpack');
-import elixir from 'laravel-elixir';
+var elixir = require('laravel-elixir');
 var util = require('gulp-util');
 var _ = require('lodash');
 
