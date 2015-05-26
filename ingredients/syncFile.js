@@ -1,4 +1,5 @@
 var elixir = require('laravel-elixir');
+var gulp = require('gulp');
 
 elixir.extend("syncFile", function (src, dest) {
 
