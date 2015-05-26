@@ -17,6 +17,7 @@ gulpir.config.setDefaultsFrom('gulper.json');
 
 //Extentions
 require('./ingredients/webpack')
-
+require('./ingredients/syncFile')
+require('./ingredients/syncDir')
 
 export default gulpir;
