@@ -31,7 +31,10 @@ elixir.extend('webpack', function (config, watch) {
 				{
 					test: /\.js$/,
 					exclude: /node_modules/,
-					loader: 'babel-loader?experimental&optional=runtime'
+					loader: 'babel-loader',
+					query: {
+						optional: ['runtime']
+					}
 				}
 			]
 		}
