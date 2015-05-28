@@ -5,40 +5,44 @@ var _ = require('lodash');
 
 var DEBUG = true;
 
+
+var defaultConfig = {
+
+	stats: {
+		colors: true,
+		reasons: DEBUG
+	},
+
+	plugins: [
+		new webpack.optimize.OccurenceOrderPlugin(),
+	].concat(DEBUG ? [] : [
+			 new webpack.optimize.DedupePlugin(),
+			 new webpack.optimize.UglifyJsPlugin(),
+			 new webpack.optimize.AggressiveMergingPlugin()
+		 ]),
+
+	resolve: {
+		extensions: ['', '.js']
+	},
+
+	module: {
+		loaders: [
+			{
+				test: /\.js$/,
+				exclude: /node_modules/,
+				loader: 'babel-loader',
+				query: {
+					optional: ['runtime'],
+					cacheDirectory: true
+				}
+			}
+		]
+	}
+};
+
 elixir.extend('webpack', function (config, watch) {
 	var started = false;
-	var webpackConfig = _.merge(config, {
-
-		stats: {
-			colors: true,
-			reasons: DEBUG
-		},
-
-		plugins: [
-			new webpack.optimize.OccurenceOrderPlugin(),
-		].concat(DEBUG ? [] : [
-				 new webpack.optimize.DedupePlugin(),
-				 new webpack.optimize.UglifyJsPlugin(),
-				 new webpack.optimize.AggressiveMergingPlugin()
-			 ]),
-
-		resolve: {
-			extensions: ['', '.js']
-		},
-
-		module: {
-			loaders: [
-				{
-					test: /\.js$/,
-					exclude: /node_modules/,
-					loader: 'babel-loader',
-					query: {
-						optional: ['runtime']
-					}
-				}
-			]
-		}
-	});
+	var webpackConfig = _.merge(config, defaultConfig);
 
 	var bundler = webpack(webpackConfig);
 
